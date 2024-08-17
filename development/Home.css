@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --font-weight: 400;
+  --font-style: normal;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --primary-color: #570303;
+  --secondary-color: #2ecc71;
+  --background-color: #f5f5f5;
+  --text-color: #3a322d;
+}
+
+html {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+ul {
+    margin-inline-end: 4rem;
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: #3a322d;
+}
+
+ul li {
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------- Introduction ----------------- */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    color: #000;
+    margin-inline-start: 10rem;
+}
+
+.intro h3 {
+    font-size: 5rem;
+}
+
+.intro h1 {
+    margin-top: -4rem;
+    font-size: 10rem;
+}
+
+.intro span {
+    color: var(--primary-color);
+}
+
+.intro p {
+    font-size: 1.8rem;
+    vertical-align: middle;
+}
+
+.intro button {
+    padding: 0.5rem 2rem;
+    margin-inline-end: 1rem;
+    font-size: 1.8rem;
+    color: whitesmoke;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+}
+
+.intro button:hover {
+    cursor: pointer;
+    background-color: #570303e5;
+}
+
+/* -------------- Who We Are --------------- */
+
+.who, .achievements {
+    display: flex;
+    margin: 1rem 10rem;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.who span, .achievements span {
+    font-size: 8rem;
+    line-height: 1rem;
+    color: var(--primary-color);
+}
+
+.inline-hr {
+    display: inline-block;
+    width: 20rem;
+    height: 0.2rem;
+    background-color: #333;
+    vertical-align: middle;
+    margin: 0 1rem;
+}
+
+/* ------------------- Alumni Sliding ------------------- */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
+
+.alumni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.alumniItems {
+    overflow: hidden;
+    padding: 0.5rem;
+    background-color: #D9D9D9;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+}
+
+.alumniItem {
+    display: inline-block;
+    animation: 60s slide infinite linear;
+    padding: 1rem;
+}
+
+.alumniItem img {
+    height: 4rem;
+    margin: 0 2rem;
+}
+
+/* ----------------- Achievements ----------------- */
+
+.achievements button {
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    margin-inline-end: 2rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+.achievements .loginBtn {
+    color: whitesmoke;
+    background-color: var(--primary-color);
+}
+
+.achievements .signupBtn {
+    color: var(--primary-color);
+}
+
+.achievements .loginBtn:hover, .signupBtn:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: #570303b4;
+}
